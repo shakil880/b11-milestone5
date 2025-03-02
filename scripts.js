@@ -14,6 +14,8 @@ let theDate = new Date()
 
 const activityLog = document.getElementById('activity-log')
 
+const themeBtn = document.getElementById('theme-btn-div')
+
 
 
 
@@ -36,12 +38,13 @@ for (let button of buttons) {
     button.disabled = true
     button.style.opacity = "20%";
 
-    if (Number(h1Main.innerText) == 1) {
-      alert("Congrats!!! You have completed all the current task");
-      h1Main.innerText = Number(h1Main.innerText) - 1;
-    } else {
+    if (Number(h1Main.innerText) > 1) {
       alert("Board Updated Successfully");
       h1Main.innerText = Number(h1Main.innerText) - 1;
+    } else if (Number(h1Main.innerText) <= 1) {
+      
+      h1Main.innerText = Number(h1Main.innerText) - 1;
+      alert("Congrats!!! You have completed all the current task.");
     }
 
     checkboxNumber.innerText = Number(checkboxNumber.innerText) + 1;
@@ -68,8 +71,19 @@ for (let button of buttons) {
   })
 }
 
+
 clearBtn.addEventListener('click', () => {
   activityLog.innerHTML = ""
 })
 
+
+
+themeBtn.addEventListener('click', () => {
+  const max = 255;
+  const randomInt = Math.floor(Math.random() * max);
+
+  document.body.style.backgroundColor = `rgb(${randomInt}, 100, 20)`
+  console.log(randomInt)
+  
+})
 
