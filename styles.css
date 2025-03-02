@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.font-poppins-serif {
+  font-family: "Poppins", sans-serif;
+
+}
+
+.primary-color {
+  color: rgba(0, 48, 60, 1); 
+}
+
+.secondary-color {
+  color: blue;
+}
+
+.primary-btn {
+  height: 44px;
+  width: 135px;
+  background-color: rgba(55, 82, 253, 1);
+  color: white;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+
+  /* opacity: 20%; */
+}
+
+.primary-bg {
+  background-color: rgba(244, 247, 255, 1);
+}
+
+.secondary-bg {
+  background-color: white;
+}
+
+.flex-row {
+  display: flex; 
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container {
+  margin: 24px auto;
+  /* background-color: white; */
+
+  max-width: 1536px;
+  /* min-height: 150vh; */
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 1fr;
+  gap: 22px;
+
+  grid-template-areas: 
+  "header header header header"
+  "main main main sidebar"
+  ;
+}
+
+.header {
+  align-items: center;
+  font-size: 3.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+
+
+.logo {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 52px;
+  width: 52px;
+}
+
+
+.logo-span {
+  font-weight: bold;
+}
+
+.label-check {
+  background-color: blue;
+}
+
+.nav-links {
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+}
+
+.theme-btn-div {
+  height: 64px;
+  width: 64px;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+}
+
+.theme-btn {
+  width: 40px;
+  height: 40px;
+
+}
+
+.checkbox {
+  height: 64px;
+  width: 123px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 3.2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+/* Main section ------------------------------ */
+
+.main {
+  /* background-color: yellow; */
+  border-radius: 20px;
+  padding: 24px;
+
+}
+
+.top-main {
+  gap: 24px;
+}
+
+.common-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  height: 128px;
+  border-radius: 10px;
+}
+
+.left {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p1-main-left {
+  font-size: 1.6rem;
+}
+
+.h1-main-left {
+  font-size: 3.2rem;
+}
+
+.p1-main-right {
+  font-size: 2.2rem;
+}
+
+.h1-main-right {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.checkbox-main, .calender-main {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.sidebar {
+  background-color: g;
+}
+
+
+.left {
+  flex: 1;
+}
+
+.middle {
+  flex: 2;
+  background-color: rgb(76, 76, 199);
+}
+
+.middle-desc {
+  font-size: 2.4rem;
+  color: white;
+}
+
+.right {
+  flex: 1;
+}
+
+.horizontal-main {
+  margin: 32px 0;
+  border: 1px dashed gray;
+}
+
+.horizontal {
+  margin: 20px 0;
+  border: 1px dashed gray;
+}
+
+
+.bottom-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  color: rgba(0, 48, 60, 1);
+
+  gap: 36px;
+}
+
+.main-card {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+.main-card-top {
+  width: 114px;
+  height: 40px;
+
+  font-size: 1.6rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 5px;
+}
+
+
+.main-card-head {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin: 16px 0;
+}
+
+.main-card-desc {
+  height: 92px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 1.6rem;
+}
+
+.main-card-bottom {
+  font-size: 1.6rem;
+  justify-content: space-between;
+}
+
+.deadline-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.deadline-date {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+
+
+
+
