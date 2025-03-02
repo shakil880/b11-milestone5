@@ -36,6 +36,11 @@
   /* border: 1px solid red; */
 }
 
-.card > p {
+.card > p, .card > li {
   font-size: 2rem;
+}
+
+
+.card > p > h3 {
+  font-size: 10rem;
 }
