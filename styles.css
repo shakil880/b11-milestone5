@@ -209,7 +209,7 @@ html {
 
 .middle {
   flex: 2;
-  background-color: rgb(76, 76, 199);
+  background: linear-gradient(to right, #3752FD 0%, #6C7FFA 53%, #9BA8F8 100%);
 }
 
 .middle-desc {
@@ -223,12 +223,12 @@ html {
 
 .horizontal-main {
   margin: 32px 0;
-  border: 1px dashed gray;
+  border: 0.5px dashed gray;
 }
 
 .horizontal {
   margin: 20px 0;
-  border: 1px dashed gray;
+  border: 0.5px dashed gray;
 }
 
 
