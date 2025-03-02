@@ -335,12 +335,31 @@ html {
 }
 
 .activity-log-p {
-  height: 48px;
+  min-height: 48px;
   text-align: left;
   font-size: 1.6rem;
   border-radius: 5px;
   padding: 10px;
+  margin: 20px 0;
 }
 
 
+
+
+  /* @media (min-width: 576px) {
+    .container {
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 1fr 1fr;
+    gap: 22px;
+
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "sidebar sidebar siderbar sidebar"
+    ;
+  }
+} */
 

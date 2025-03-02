@@ -17,7 +17,7 @@
       <div class="nav-links flex-row">
         <div class="checkbox primary-bg">
           <img src="./assets/checkbox.png" alt="">
-          <span>23</span>
+          <span class="checkbox-number">23</span>
         </div>
         <div class="theme-btn-div flex-row primary-bg">
           <img class="theme-btn" src="./assets/theme-btn.png" alt="">
@@ -35,7 +35,7 @@
           </div>
           <div class="left-desc">
             <p class="p1-main-left">Task Assigned</p>
-            <h1 class="h1-main-left">05</h1>
+            <h1 class="h1-main-left">06</h1>
           </div>
         </div>
 
@@ -52,8 +52,8 @@
             <img src="./assets/calender.png" alt="">
           </div>
           <div class="right-desc">
-            <p class="p1-main-right">Wed</p>
-            <h1 class="h1-main-right">Jul 28, 2025</h1>
+            <p id="p1-main-right" class="p1-main-right">Wed</p>
+            <h1 id="h1-main-right" class="h1-main-right">Jul 28, 2025</h1>
           </div>
         </div>
 
@@ -77,7 +77,25 @@
               <p class="deadline-title">Deadline</p>
               <p class="deadline-date">21 March 2025</p>
             </div>
-            <button class="primary-btn">Completed</button>
+            <button class="primary-btn main-primary-btn">Completed</button>
+          </div>
+        </div>
+        <div class="main-card primary-bg">
+          <div class="main-card-top secondary-bg">
+            <p>CloudSync</p>
+          </div>
+          <p class="main-card-head">Add Dark Mode</p>
+
+          <div class="main-card-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, repellat?</div>
+
+          <hr class="horizontal">
+
+          <div class="main-card-bottom flex-row">
+            <div class="deadline">
+              <p class="deadline-title">Deadline</p>
+              <p class="deadline-date">21 March 2025</p>
+            </div>
+            <button class="primary-btn main-primary-btn">Completed</button>
           </div>
         </div>
         <div class="main-card primary-bg">
@@ -95,7 +113,7 @@
               <p class="deadline-title">Deadline</p>
               <p class="deadline-date">21 March 2025</p>
             </div>
-            <button class="primary-btn">Completed</button>
+            <button class="primary-btn main-primary-btn">Completed</button>
           </div>
         </div>
         <div class="main-card primary-bg">
@@ -113,7 +131,7 @@
               <p class="deadline-title">Deadline</p>
               <p class="deadline-date">21 March 2025</p>
             </div>
-            <button class="primary-btn">Completed</button>
+            <button class="primary-btn main-primary-btn">Completed</button>
           </div>
         </div>
         <div class="main-card primary-bg">
@@ -131,7 +149,7 @@
               <p class="deadline-title">Deadline</p>
               <p class="deadline-date">21 March 2025</p>
             </div>
-            <button class="primary-btn">Completed</button>
+            <button class="primary-btn main-primary-btn">Completed</button>
           </div>
         </div>
         <div class="main-card primary-bg">
@@ -149,25 +167,7 @@
               <p class="deadline-title">Deadline</p>
               <p class="deadline-date">21 March 2025</p>
             </div>
-            <button class="primary-btn">Completed</button>
-          </div>
-        </div>
-        <div class="main-card primary-bg">
-          <div class="main-card-top secondary-bg">
-            <p>ShopEase</p>
-          </div>
-          <p class="main-card-head">Fix Mobile Button Issue</p>
-
-          <div class="main-card-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, repellat?</div>
-
-          <hr class="horizontal">
-
-          <div class="main-card-bottom flex-row">
-            <div class="deadline">
-              <p class="deadline-title">Deadline</p>
-              <p class="deadline-date">21 March 2025</p>
-            </div>
-            <button class="primary-btn">Completed</button>
+            <button class="primary-btn main-primary-btn">Completed</button>
           </div>
         </div>
       </div>
@@ -184,16 +184,15 @@
             <p>Activity Log</p>
           </span>
         </div>
-
-        <button class="primary-btn">Clear History</button>
-
-        
+        <button id="clear-btn" class="primary-btn clear-btn">Clear History</button>        
       </div>
 
       <hr class="horizontal">
 
-      <div class="activity-log">
-        <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur.</p>
+      <div class="activity-log" id="activity-log">
+        <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut in, cum laudantium aspernatur doloribus dolor odio? Quam, ullam sunt..</p>
+        <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut in, cum laudantium aspernatur doloribus dolor odio? Quam, ullam sunt..</p>
+        <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut in, cum laudantium aspernatur doloribus dolor odio? Quam, ullam sunt..</p>
       </div>
 
 
@@ -201,12 +200,75 @@
   </div>
 
   <script>
-    const button = document.querySelector('.primary-btn')
+    const buttons = document.querySelectorAll('.main-primary-btn')
 
-    button.addEventListener('click', () => {
-      button.style.opacity = "20%"
-    })
+    const h1Main = document.querySelector('.h1-main-left')
+    const checkboxNumber = document.querySelector('.checkbox-number')
+
+    const date = document.getElementById('h1-main-right')
+
+    const dayOfWeek = document.getElementById('p1-main-right')
+
+    const clearBtn = document.getElementById('clear-btn')
+
+    // buttons.forEach(button => {
+    //   button.addEventListener('click', () => {
+    //     button.disabled = true
+    //     button.style.opacity = "20%";
+
+    //     if (Number(h1Main.innerText) == 4) {
+    //       alert("Completed")
+    //     } else {
+    //       h1Main.innerText = Number(h1Main.innerText) - 1;
+    //     }
+
+        
+    //     checkboxNumber.innerText = Number(checkboxNumber.innerText) + 1;
+    //     alert("Board Updated Successfully");
+    //   });
+    // });
     
+    const theDate = new Date()
+
+    const day = ['Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', ]
+
+    const currentDate = {
+      hours : theDate.getHours(),
+      day : day[theDate.getDate()],
+      date : theDate.getDate(),
+      month : theDate.getMonth() + 1,
+      year : theDate.getFullYear()
+    }
+
+    date.innerText = currentDate.date + "/" + currentDate.month  + "/" + currentDate.year
+    dayOfWeek.innerText = currentDate.day
+
+
+    for (let button of buttons) {
+      button.addEventListener('click', () => {
+        button.disabled = true
+        button.style.opacity = "20%";
+
+        if (Number(h1Main.innerText) == 1) {
+          alert("Congrats!!! You have completed all the current task");
+          h1Main.innerText = Number(h1Main.innerText) - 1;
+        } else {
+          h1Main.innerText = Number(h1Main.innerText) - 1;
+          alert("Board Updated Successfully");
+        }
+
+        checkboxNumber.innerText = Number(checkboxNumber.innerText) + 1;
+        
+      })
+    }
+
+    clearBtn.addEventListener('click', () => {
+      document.getElementById('activity-log').innerHTML = ""
+    })
+
+
+
+
   </script>
   
   <script></script>
