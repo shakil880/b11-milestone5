@@ -21,7 +21,7 @@ html {
 }
 
 .secondary-color {
-  color: blue;
+  color: white;
 }
 
 .primary-btn {
@@ -57,11 +57,7 @@ html {
 
 .container {
   margin: 24px auto;
-  /* background-color: white; */
-
   max-width: 1536px;
-  /* min-height: 150vh; */
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 100px 1fr;
@@ -69,9 +65,11 @@ html {
 
   grid-template-areas: 
   "header header header header"
-  "main main main sidebar"
-  ;
+  "main main main sidebar";
 }
+
+
+
 
 .header {
   align-items: center;
@@ -362,4 +360,5 @@ html {
     ;
   }
 } */
+
 

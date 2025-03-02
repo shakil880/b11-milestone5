@@ -1,0 +1,41 @@
+.blog-container {
+  margin: 24px auto;
+  max-width: 1536px;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 100px 1fr;
+  gap: 20px;
+
+  grid-template-areas: 
+  "header"
+  "blog-head"
+  "blog"
+  ;
+}
+
+.blog {
+  height: 100vh;
+  border-radius: 20px;
+
+}
+
+.blog-head {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.card {
+  min-height: 150px;
+  margin-bottom: 20px;
+  padding: 25px;
+
+  border-radius: 20px;
+
+  /* border: 1px solid red; */
+}
+
+.card > p {
+  font-size: 2rem;
+}

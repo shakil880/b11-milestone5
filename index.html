@@ -35,15 +35,15 @@
           </div>
           <div class="left-desc">
             <p class="p1-main-left">Task Assigned</p>
-            <h1 class="h1-main-left">06</h1>
+            <h1 class="h1-main-left">6</h1>
           </div>
         </div>
 
         <div class="middle common-main">
           <img src="./assets/board.png" alt="">
           <div class="middle-desc">
-            <p class="middle-desc-p">Discover Something</p>
-            <p class="middle-desc-p2">New Today!</p>
+            <a href="./blogs.html" class="middle-desc-p secondary-color">Discover Something</a> <br>
+            <a href="./blogs.html" class="middle-desc-p2 secondary-color">New Today!</a>
           </div>
         </div>
         
@@ -138,7 +138,7 @@
           <div class="main-card-top secondary-bg">
             <p>ShopEase</p>
           </div>
-          <p class="main-card-head">Fix Mobile Button Issue</p>
+          <p id="main-card-head" class="main-card-head">Fix Mobile Button Issue</p>
 
           <div class="main-card-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, repellat?</div>
 
@@ -190,9 +190,9 @@
       <hr class="horizontal">
 
       <div class="activity-log" id="activity-log">
+        <!-- <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut in, cum laudantium aspernatur doloribus dolor odio? Quam, ullam sunt..</p>
         <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut in, cum laudantium aspernatur doloribus dolor odio? Quam, ullam sunt..</p>
-        <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut in, cum laudantium aspernatur doloribus dolor odio? Quam, ullam sunt..</p>
-        <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut in, cum laudantium aspernatur doloribus dolor odio? Quam, ullam sunt..</p>
+        <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut in, cum laudantium aspernatur doloribus dolor odio? Quam, ullam sunt..</p> -->
       </div>
 
 
@@ -200,77 +200,10 @@
   </div>
 
   <script>
-    const buttons = document.querySelectorAll('.main-primary-btn')
-
-    const h1Main = document.querySelector('.h1-main-left')
-    const checkboxNumber = document.querySelector('.checkbox-number')
-
-    const date = document.getElementById('h1-main-right')
-
-    const dayOfWeek = document.getElementById('p1-main-right')
-
-    const clearBtn = document.getElementById('clear-btn')
-
-    // buttons.forEach(button => {
-    //   button.addEventListener('click', () => {
-    //     button.disabled = true
-    //     button.style.opacity = "20%";
-
-    //     if (Number(h1Main.innerText) == 4) {
-    //       alert("Completed")
-    //     } else {
-    //       h1Main.innerText = Number(h1Main.innerText) - 1;
-    //     }
-
-        
-    //     checkboxNumber.innerText = Number(checkboxNumber.innerText) + 1;
-    //     alert("Board Updated Successfully");
-    //   });
-    // });
     
-    const theDate = new Date()
-
-    const day = ['Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', ]
-
-    const currentDate = {
-      hours : theDate.getHours(),
-      day : day[theDate.getDate()],
-      date : theDate.getDate(),
-      month : theDate.getMonth() + 1,
-      year : theDate.getFullYear()
-    }
-
-    date.innerText = currentDate.date + "/" + currentDate.month  + "/" + currentDate.year
-    dayOfWeek.innerText = currentDate.day
-
-
-    for (let button of buttons) {
-      button.addEventListener('click', () => {
-        button.disabled = true
-        button.style.opacity = "20%";
-
-        if (Number(h1Main.innerText) == 1) {
-          alert("Congrats!!! You have completed all the current task");
-          h1Main.innerText = Number(h1Main.innerText) - 1;
-        } else {
-          h1Main.innerText = Number(h1Main.innerText) - 1;
-          alert("Board Updated Successfully");
-        }
-
-        checkboxNumber.innerText = Number(checkboxNumber.innerText) + 1;
-        
-      })
-    }
-
-    clearBtn.addEventListener('click', () => {
-      document.getElementById('activity-log').innerHTML = ""
-    })
-
-
-
 
   </script>
   
-  <script></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
