@@ -174,8 +174,41 @@
 
     </main>
 
-    <div class="sidebar" style="grid-area: sidebar;">
+    <div class="sidebar secondary-bg " style="grid-area: sidebar;">
+      <div class="sidebar-main flex-col">
+        <div class="activity">
+          <span class="activity-icon">
+            <img src="./assets/activity.png" alt="">
+          </span>
+          <span>
+            <p>Activity Log</p>
+          </span>
+        </div>
+
+        <button class="primary-btn">Clear History</button>
+
+        
+      </div>
+
+      <hr class="horizontal">
+
+      <div class="activity-log">
+        <p class="activity-log-p primary-bg">Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+
+
     </div>
   </div>
+
+  <script>
+    const button = document.querySelector('.primary-btn')
+
+    button.addEventListener('click', () => {
+      button.style.opacity = "20%"
+    })
+    
+  </script>
+  
+  <script></script>
 </body>
 </html>
